@@ -1,0 +1,12 @@
+Run testGPIO.py to test the GPIOWrapper.py
+Use the GPIOWrapper.py once it works to easily talk to all the GPIO pins
+
+Where I copied everything from:
+https://github.com/derekstavis/python-sysfs-gpio/blob/master/sysfs/gpio.py
+
+The files that need to be written to are explained here (2nd codebox):
+http://elinux.org/Jetson/Tutorials/GPIO
+
+You might need another function that releases the files which I am writing to.
+
+Fabi
