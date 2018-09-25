@@ -1,6 +1,6 @@
 # Project TK1 Car - Summer 2016 - Maxime DROY - Nicolas VENDITTI - MAM4
 
-#CAR DECISIONS
+# CAR DECISIONS
 We had several features to implement in order to improve the previous learning car projects
 
 - First off we changed their code in order for it to work on the Jetson TK1.
@@ -14,7 +14,7 @@ The fews differences were about the camera capture and activating the directions
 
 - To the previous project we changed the way the car moves by improving the decisions, the car no longer tries to find vanishing points, but moves forward and tries to avoid obstacles.
 
-#FACE RECOGNITION
+# FACE RECOGNITION
 We added a face recognition CNN in the main program, it is only trained with our faces for now, so everyone is recognized as Nico or Max.
 
 If you want to add new faces you need to do the following:
@@ -29,18 +29,18 @@ Once it's done you will have a model file named "faceRecog", you can test it by 
 - Once a recognition is done, you will have an array prediction like [ 0.1 , 0.3 , 0.6 ], each of the positions of the array corresponds to a face and the one that has the highest probability is the actual predicted face. Check faceRecog.py to understand how the face name is displayed.
 
 
-#TRAFFIC SIGNS RECOGNITION
+# TRAFFIC SIGNS RECOGNITION
 We wanted to be able to recognize a traffic sign and analyze it with deep learning algorithms but we were lacking time, and our CNN for recognition wasn't working in the end.
 We still have the detection of circle shaped signs though, the code is in the "traffic_signs" folder but isn't implemented in the main script.
 
-#PEDESTRIAN DETECTION
+# PEDESTRIAN DETECTION
 We also wanted to detect a pedestrian and calculate his distance to the camera, so we used an openCV detection at first (code in "pedestrian_detect" folder, also not implemented in main) but it's a clutchy detection which isn't working really well with the low angle of our camera.
 Using a deep learning algorithm would also be key here. 
 
-#OBJECT RECOGNITION
+# OBJECT RECOGNITION
 Finally we planned on using googlenet training model for imagenet, we were able to implement it on python but the main program is already taking too much time by itself, the code is in the "googlenet" folder.
 
-#STARTING THE MAIN PROGRAM
+# STARTING THE MAIN PROGRAM
 Connect to the car by SSH (you need to be on the same network of course, a phone is good, don't use the university wifi):
 ssh ubuntu@tegra-ubuntu
 (password: ubuntu)
@@ -48,7 +48,7 @@ To start the main program: sudo python start.py
 When started it needs to be interupted with Ctrl-C .
 Each run is saved in a folder into the image folder (images taken and decision historic)
 
-#HOW TO CONTINUE OUR PROJECT
+# HOW TO CONTINUE OUR PROJECT
 - Implement traffic signs recog with deep learning
 - Use a rotative camera instead of the classic camera to improve decisions
 - Improve pedestrian detection to make it usable
